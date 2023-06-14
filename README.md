@@ -1,1 +1,1 @@
-# photo_gallary_app
+# photo_gallery_app
