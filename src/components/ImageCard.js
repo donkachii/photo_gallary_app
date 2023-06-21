@@ -1,6 +1,5 @@
 import React from "react";
 import { Typography, Paper, Grid, Box, Rating } from "@mui/material";
-import pic1 from "../assets/images/pic1.jpeg";
 
 const ImageCard = ({ photo }) => {
   return (

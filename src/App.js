@@ -1,27 +1,18 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 import SearchAppBar from "./components/AppBar";
-import ImageCard from "./components/ImageCard";
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
-import photos from "./data.json";
-import { Typography } from "@mui/material";
+import Photo from "./pages/Photo";
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <SearchAppBar />
-      <Container sx={{ marginY: 5 }}>
-        <Typography variant="h4" component="h2" marginTop={5} marginBottom={3}>
-          {photos.name}
-        </Typography>
-
-        <Grid container spacing={5}>
-          {photos.images.map((photo, i) => (
-            <ImageCard photo={photo} id={photo.id} key={i} />
-          ))}
-        </Grid>
-      </Container>
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/:id" element={<Photo />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
