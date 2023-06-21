@@ -13,7 +13,11 @@ const Home = () => {
           {photos.name}
         </Typography>
 
-        <Grid container spacing={5}>
+        <Grid
+          container
+          spacing={{ xs: 1, sm: 3, md: 5 }}
+          columns={{ xs: 4, sm: 8, md: 12 }}
+        >
           {photos.images.map((photo, i) => (
             <ImageCard photo={photo} id={photo.id} key={i} />
           ))}

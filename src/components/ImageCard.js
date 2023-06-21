@@ -7,7 +7,7 @@ const ImageCard = ({ photo }) => {
       <Paper elevation={3}>
         <img src={photo.image} alt="" className="images" />
         <Box padding={1}>
-          <Typography variant="subtitle1" component="h2">
+          <Typography variant="subtitle1" component="h2" noWrap>
             {photo.name}
           </Typography>
           <Box
@@ -26,7 +26,7 @@ const ImageCard = ({ photo }) => {
             <Typography variant="body2" component="p" marginLeft={0.5}>
               {photo.rating}
             </Typography>
-            <Typography variant="body2" component="p" marginLeft={0.5}>
+            <Typography variant="body2" component="p" marginLeft={0.5} noWrap>
               ({photo.numberOfReviews} reviews)
             </Typography>
           </Box>
